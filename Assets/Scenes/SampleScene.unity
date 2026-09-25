@@ -808,6 +808,53 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1 &418445462
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 418445463}
+  - component: {fileID: 418445464}
+  m_Layer: 0
+  m_Name: Tester01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &418445463
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418445462}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1776.9508, y: -0.00001, z: 29671.19}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &418445464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418445462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5eef0ba0702b754c8004112d24a2af2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AuthenticationTestManager
+  username: player01
+  password: Test1234!
+  playerName: Player01
 --- !u!1 &478669854
 GameObject:
   m_ObjectHideFlags: 0
@@ -1993,6 +2040,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2053270677}
   - component: {fileID: 2053270676}
+  - component: {fileID: 2053270678}
   m_Layer: 0
   m_Name: RankUIManager
   m_TagString: Untagged
@@ -2014,36 +2062,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RankUIManager
   rankDataPrefab: {fileID: 5214939203697852008, guid: 8be73c612b78f0c4c9c184eb9038952f, type: 3}
   rankPanel: {fileID: 1902789795}
-  playerDatas:
-  - playerName: Max Verstappen
-    rankNumber: 1
-    playerScore: 299
-    profileSprite: {fileID: 8687094200522076264, guid: 3cb58fcfb6004ce4e840f5bfceb7b72d, type: 3}
-  - playerName: Kimi Antonelli
-    rankNumber: 2
-    playerScore: 200
-    profileSprite: {fileID: -6815124524411260972, guid: a4d190ef1fc68414e99b33d3aacc179a, type: 3}
-  - playerName: Charles Leclerc
-    rankNumber: 3
-    playerScore: 199
-    profileSprite: {fileID: 8294594809495085174, guid: 5f67492bb664a2e48939bacfc980dc2f, type: 3}
-  - playerName: A
-    rankNumber: 4
-    playerScore: 12
-    profileSprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  - playerName: B
-    rankNumber: 5
-    playerScore: 11
-    profileSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  - playerName: C
-    rankNumber: 6
-    playerScore: 9
-    profileSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  - playerName: D
-    rankNumber: 7
-    playerScore: 7
-    profileSprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  createdPlayerDatas: []
 --- !u!4 &2053270677
 Transform:
   m_ObjectHideFlags: 0
@@ -2059,6 +2077,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2053270678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053270675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0d1a4674e5ae74488b8440b35222d64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UGSRankingManager
+  rankUIManager: {fileID: 2053270676}
+  testScore: 50
+  testProfileTexture: {fileID: 2800000, guid: 3cb58fcfb6004ce4e840f5bfceb7b72d, type: 3}
 --- !u!1001 &6509538603820310553
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2239,3 +2272,4 @@ SceneRoots:
   - {fileID: 102172869}
   - {fileID: 1811050802}
   - {fileID: 2053270677}
+  - {fileID: 418445463}

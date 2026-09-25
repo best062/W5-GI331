@@ -1,43 +1,50 @@
-using TMPro;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 [System.Serializable]
 public struct PlayerData
 {
+    public string playerId;
     public string playerName;
     public int rankNumber;
     public int playerScore;
-    public Sprite profileSprite;
+    public Texture profileTexture;
 
-    public PlayerData(int rankNumber, string playerName
-        ,int playerScore, Sprite profileSprite)
+    public PlayerData(
+        string playerId,
+        int rankNumber,
+        string playerName,
+        int playerScore,
+        Texture profileTexture)
     {
+        this.playerId = playerId;
         this.rankNumber = rankNumber;
         this.playerName = playerName;
         this.playerScore = playerScore;
-        this.profileSprite = profileSprite;
+        this.profileTexture = profileTexture;
     }
 }
 
 public class RankData : MonoBehaviour
 {
-    public PlayerData playerData;
-
     [SerializeField] private RawImage profileImg;
-    [SerializeField] private Sprite defaultProfileSprite;
-    [SerializeField] private TMP_Text rankText;
-    [SerializeField] private TMP_Text playerNameText;
-    [SerializeField] private TMP_Text scoreText;
+    [SerializeField] private Texture defaultProfileTexture;
+    [SerializeField] private TextMeshProUGUI rankText;
+    [SerializeField] private TextMeshProUGUI playerNameText;
+    [SerializeField] private TextMeshProUGUI scoreText;
 
-    [ContextMenu("Update Data")]
-    public void UpdateData()
+    public void SetData(PlayerData playerData)
     {
-        profileImg.texture = playerData.profileSprite != null
-            ? playerData.profileSprite.texture : defaultProfileSprite.texture;
+        profileImg.texture = playerData.profileTexture != null
+            ? playerData.profileTexture
+            : defaultProfileTexture;
 
         rankText.text = playerData.rankNumber.ToString();
         playerNameText.text = playerData.playerName;
-        scoreText.text = playerData.playerScore.ToString("n0");
+        scoreText.text = playerData.playerScore.ToString("0");
     }
+
 }
