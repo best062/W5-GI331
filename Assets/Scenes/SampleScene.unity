@@ -852,9 +852,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5eef0ba0702b754c8004112d24a2af2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AuthenticationTestManager
-  username: player01
+  username: maxverstappen
   password: Test1234!
-  playerName: Player01
+  playerName: Max03
 --- !u!1 &478669854
 GameObject:
   m_ObjectHideFlags: 0
